@@ -36,7 +36,7 @@ class ProductDisplay extends StatelessWidget {
                   child: RichText(
                       text: TextSpan(children: [
                     TextSpan(
-                        text: '\$ ${product.price}',
+                        text: '${product.variants[0].prices[0].currencyCode} ${product.variants[0].prices[0].amount}',
                         style: const TextStyle(
                             color: const Color(0xFFFFFFFF),
                             fontWeight: FontWeight.w400,
@@ -65,9 +65,9 @@ class ProductDisplay extends StatelessWidget {
                     ),
                     child: Container(
                       child: Hero(
-                        tag: product.image,
+                        tag: product.images[0].url,
                         child: Image.asset(
-                          product.image,
+                          product.images[0].url,
                           fit: BoxFit.contain,
                           height: 230,
                           width: 230,

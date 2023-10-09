@@ -2,19 +2,22 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-import 'models/user.dart';
+import '../models/user.dart';
 
-class ApiService {
-  static String url(int nrResults) {
-    return 'http://api.randomuser.me/?results=$nrResults';
+abstract class ApiService {
+  static String urlWithLimits(int nrResults) {
+    return apiUrl;
   }
+  static String apiUrl = "https://alpha.sourcegoodfood.com";
+
+  String url();
 
   static Future<List<User>> getUsers({int nrUsers = 1}) async {
     try {
       final response = await http.get(
           //TODO flutter 2 migration
           Uri(
-            path: url(nrUsers),
+            path: urlWithLimits(nrUsers),
           ),
           headers: {"Content-Type": "application/json"});
 

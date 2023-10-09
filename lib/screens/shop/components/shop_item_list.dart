@@ -46,7 +46,7 @@ class _ShopItemListState extends State<ShopItemList> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              widget.product.name,
+                              widget.product.title,
                               textAlign: TextAlign.right,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -66,7 +66,7 @@ class _ShopItemListState extends State<ShopItemList> {
                                   children: <Widget>[
                                     ColorOption(Colors.red),
                                     Text(
-                                      '\$${widget.product.price}',
+                                      '${widget.product.variants[0].prices[0].currencyCode} ${widget.product.variants[0].prices[0].amount}',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                           color: darkGrey,
@@ -82,7 +82,6 @@ class _ShopItemListState extends State<ShopItemList> {
                       ),
                       Theme(
                           data: ThemeData(
-                              accentColor: Colors.black,
                               textTheme: TextTheme(
                                 headline6: TextStyle(
                                     fontFamily: 'Montserrat',
@@ -94,7 +93,7 @@ class _ShopItemListState extends State<ShopItemList> {
                                   fontSize: 12,
                                   color: Colors.grey[400],
                                 ),
-                              )),
+                              ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.black)),
                           child: NumberPicker(
                             value: quantity,
                             minValue: 1,

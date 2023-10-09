@@ -95,7 +95,7 @@ class _ProductPageState extends State<ProductPage> {
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0, right: 16.0),
                   child: Text(
-                    product.name,
+                    product.title,
                     style: const TextStyle(
                         color: const Color(0xFFFEFEFE),
                         fontWeight: FontWeight.w600,

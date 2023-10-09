@@ -1,5 +1,6 @@
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class ChangeLanguagePage extends StatefulWidget {
   @override
@@ -18,6 +19,7 @@ class _ChangeCountryPageState extends State<ChangeLanguagePage> {
     'Russian',
     'Japanese',
     'French',
+    'India'
   ];
 
   String currentLanguage = '';
@@ -27,7 +29,6 @@ class _ChangeCountryPageState extends State<ChangeLanguagePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        brightness: Brightness.light,
         iconTheme: IconThemeData(
           color: Colors.black, //change your color here
         ),
@@ -36,7 +37,7 @@ class _ChangeCountryPageState extends State<ChangeLanguagePage> {
           'Settings',
           style: TextStyle(color: darkGrey),
         ),
-        elevation: 0,
+        elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
       body: SafeArea(
         bottom: true,

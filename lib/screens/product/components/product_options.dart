@@ -22,7 +22,7 @@ class ProductOption extends StatelessWidget {
           Positioned(
             left: 16.0,
             child: Image.asset(
-              product.image,
+              product.images[0].url,
               height: 200,
               width: 200,
             ),
@@ -38,7 +38,7 @@ class ProductOption extends StatelessWidget {
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 24.0),
-                    child: Text(product.name,
+                    child: Text(product.title,
                         textAlign: TextAlign.right,
                         style: TextStyle(
                             fontWeight: FontWeight.bold,

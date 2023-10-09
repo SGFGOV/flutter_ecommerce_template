@@ -25,7 +25,7 @@ class ShopProduct extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                product.name,
+                product.title,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: darkGrey,
@@ -33,7 +33,7 @@ class ShopProduct extends StatelessWidget {
               ),
             ),
             Text(
-              '\$${product.price}',
+              '${product.variants[0].prices[0].currencyCode} ${product.variants[0].prices[0].amount}',
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: darkGrey, fontWeight: FontWeight.bold, fontSize: 18.0),
@@ -73,7 +73,7 @@ class ShopProductDisplay extends StatelessWidget {
               height: 80,
               width: 80,
               child: Image.asset(
-                '${product.image}',
+                '${product.images[0].url}',
                 fit: BoxFit.contain,
               )),
         ),

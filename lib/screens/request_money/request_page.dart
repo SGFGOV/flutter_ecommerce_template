@@ -1,8 +1,9 @@
-import 'package:ecommerce_int2/api_service.dart';
+import 'package:ecommerce_int2/api/api_service.dart';
 import 'package:ecommerce_int2/models/user.dart';
 import 'package:ecommerce_int2/screens/request_money/request_amount_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../app_properties.dart';
@@ -45,13 +46,12 @@ class _RequestPageState extends State<RequestPage> {
         iconTheme: IconThemeData(
           color: Colors.black,
         ),
-        brightness: Brightness.light,
         backgroundColor: Colors.transparent,
         title: Text(
           'Request Amount',
           style: TextStyle(color: darkGrey),
         ),
-        elevation: 0,
+        elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
       body: SafeArea(
         child: Column(
@@ -68,7 +68,7 @@ class _RequestPageState extends State<RequestPage> {
                 //   if(value.isNotEmpty) {
                 //     List<Product> tempList = List<Product>();
                 //     products.forEach((product) {
-                //       if(product.name.toLowerCase().contains(value)) {
+                //       if(product.title.toLowerCase().contains(value)) {
                 //         tempList.add(product);
                 //       }
                 //     });

@@ -135,7 +135,7 @@ class ProductCard extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            product.name,
+                            product.title,
                             style:
                                 TextStyle(color: Colors.white, fontSize: 16.0),
                           ),
@@ -152,7 +152,7 @@ class ProductCard extends StatelessWidget {
                           color: Color.fromRGBO(224, 69, 10, 1),
                         ),
                         child: Text(
-                          '\$${product.price}',
+                          '\$${product.variants[0].prices[0]}',
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 18,
@@ -167,9 +167,9 @@ class ProductCard extends StatelessWidget {
           ),
           Positioned(
             child: Hero(
-              tag: product.image,
+              tag: product.images[0].url,
               child: Image.asset(
-                product.image,
+                product.images[0].url,
                 height: height / 1.7,
                 width: width / 1.4,
                 fit: BoxFit.contain,

@@ -127,7 +127,7 @@ class PromoItem extends StatelessWidget {
                   ],
                 )),
           ),
-          Positioned(
+          /*Positioned(
             top: 5,
             child: ShopProductDisplay(
               Product(
@@ -137,7 +137,7 @@ class PromoItem extends StatelessWidget {
                   45.3),
               onPressed: () {},
             ),
-          ),
+          ),*/
         ],
       ),
     );
