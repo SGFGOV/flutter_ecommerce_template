@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "361339346044",
+    "project_id": "endless-comfort-365411",
+    "storage_bucket": "endless-comfort-365411.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361339346044:android:938467183863a41a1f7df9",
+        "android_client_info": {
+          "package_name": "com.example.flutter_ecommerce_template"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "361339346044-6ei3ivqcn0qhfsf5qvhktj80romu6h1q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3KhtQ3Z6yP9OAf8nCRyufukRGnRjFk8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361339346044-6ei3ivqcn0qhfsf5qvhktj80romu6h1q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
